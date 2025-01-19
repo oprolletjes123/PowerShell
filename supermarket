@@ -1,0 +1,14 @@
+def enter_products():
+    buying_data = {}
+    enter_details = True
+    while enter_details:
+        details = input('Press A to add product and Q to quit').upper()  # Convert input to uppercase
+        if details == 'A':
+            product = input('Enter product:')
+            quantity = int(input('Enter quantity'))
+            buying_data.update({product:quantity})
+        elif details == 'Q':
+            enter_details = False
+        else:
+            print('Please select a correct option')
+    return buying_data
